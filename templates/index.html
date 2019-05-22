@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo</title>
+		
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Password</th>
+            </tr>
+            {% for user in users %}
+                <tr>
+					<td>{{ user[0] }}</td>
+					<td>{{ user[1] }}</td>
+					<td>{{ user[2] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
